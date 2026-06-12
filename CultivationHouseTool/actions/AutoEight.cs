@@ -109,6 +109,9 @@ namespace CultivationHouseTool.actions
                 return;
             }
 
+            // 购买每日兑换
+            dailyExchange(mainWindow);
+
             // 签到弹窗
             signIn(mainWindow);
 
