@@ -103,7 +103,7 @@ namespace CultivationHouseTool.actions
 
             if (mainWindow == null)
             {
-                Common.addMessage(_form.message, "未找到修仙小屋窗口，请确保游戏正在运行并且窗口标题正确");
+                Common.addMessage(_form.dailyMessage, "未找到修仙小屋窗口，请确保游戏正在运行并且窗口标题正确");
                 return;
             }
 

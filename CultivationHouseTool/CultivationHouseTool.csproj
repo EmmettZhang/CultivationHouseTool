@@ -50,13 +50,9 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="actions\AutoEight.cs" />
-        <Compile Include="actions\AutoFlip.cs" />
         <Compile Include="actions\AutoHarvest.cs" />
-        <Compile Include="actions\AutoLadder.cs" />
-        <Compile Include="actions\AutoRefreshShop.cs" />
         <Compile Include="actions\AutoSixteen.cs" />
         <Compile Include="actions\AutoTwelve.cs" />
-        <Compile Include="actions\AutoUnknown.cs" />
         <Compile Include="lib\DailySet.cs" />
         <Compile Include="lib\Dics.cs" />
         <Compile Include="lib\UnknownLib.cs" />

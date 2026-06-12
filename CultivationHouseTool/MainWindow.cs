@@ -25,10 +25,6 @@ namespace CultivationHouseTool
         private AutoHarvest _autoHarvest;
         private AutoSixteen _autoBoss;
         private AutoTwelve _autoTwelve;
-        private AutoRefreshShop _autoRefreshShop;
-        private AutoUnknown _autoUnknown;
-        private AutoLadder _autoLadder;
-        private AutoFlip _autoFlip;
 
         public MainWindow()
         {
@@ -57,52 +53,8 @@ namespace CultivationHouseTool
             _autoHarvest = new AutoHarvest(this);
             _autoBoss = new AutoSixteen(this);
             _autoTwelve = new AutoTwelve(this);
-            _autoRefreshShop = new AutoRefreshShop(this);
-            _autoUnknown = new AutoUnknown(this);
-            _autoLadder = new AutoLadder(this);
-            _autoFlip = new AutoFlip(this);
 
             UnknownLib.run();
-        }
-
-        private async void refresh_ClickAsync(object sender, EventArgs e)
-        {
-            await Task.Run(() =>
-            {
-                _autoRefreshShop.run();
-            });
-        }
-
-        private async void stopRefresh_Click(object sender, EventArgs e)
-        {
-            await Task.Run(() =>
-            {
-                _autoRefreshShop.stop();
-            });
-        }
-
-        private async void flip_Click(object sender, EventArgs e)
-        {
-            
-            await Task.Run(() =>
-            {
-                _autoFlip.run();
-            });
-        }
-
-        private void stopFlip_Click(object sender, EventArgs e)
-        {
-            _autoFlip.stop("结束翻卡");
-        }
-
-        private void unknownBox_Click(object sender, EventArgs e)
-        {
-            _autoUnknown.run();
-        }
-
-        private void stopUnknownBox_Click(object sender, EventArgs e)
-        {
-            _autoUnknown.stop("结束开盲盒");
         }
 
         private void dailySet_Click(object sender, EventArgs e)
@@ -140,16 +92,6 @@ namespace CultivationHouseTool
         private void timer1_Tick(object sender, EventArgs e)
         {
             timeLabel.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-        }
-
-        private void ladder_Click(object sender, EventArgs e)
-        {
-            _autoLadder.run();
-        }
-
-        private void stopLadder_Click(object sender, EventArgs e)
-        {
-            _autoLadder.stop();
         }
     }
 }

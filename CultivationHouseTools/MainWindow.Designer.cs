@@ -290,8 +290,7 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(180, 176);
             this.textBox1.TabIndex = 25;
-            this.textBox1.Text = "自动日常说明\r\n每日八点自动签到、葫芦签到、播撒灵露、门派演武、报名boss、购买金币精力和金币福袋、购买仙币幸运点和福袋、购买每日兑换、发红包和福包，周一八点收" +
-    "获葫芦。\r\n每日八点十分、十三点十分收割并播种门派后山。\r\n每日十六点获取boss结果，周五十六点获取本周分成。\r\n每日十二点真BOSS。";
+            this.textBox1.Text = "自动日常说明\r\n每日八点自动签到、领取当前每日签到福利、葫芦签到、播撒灵露、门派演武、报名boss、购买金币精力和金币福袋、购买仙币幸运点和福袋、购买每日兑换、发红包和福包。\r\n每日八点十分、十三点十分收割并播种门派后山。\r\n每日十二点打真BOSS。每周一十二点收获葫芦。每周五十二点自动领取天梯奖励\r\n每日十六点获取boss结果，每周五十六点获取门派本周分成。";
             // 
             // panel1
             // 
