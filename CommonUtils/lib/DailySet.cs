@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CultivationHouseTools.lib
+namespace CommonUtils.lib
 {
     public static class DailySet
     {

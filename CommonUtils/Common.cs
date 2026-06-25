@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Automation;
 using System.Windows.Forms;
 
-namespace CultivationHouseTool
+namespace CommonUtils
 {
     public static class Common
     {
@@ -49,9 +49,12 @@ namespace CultivationHouseTool
             AutomationElement button = getButton(window, title);
             if (button != null)
             {
-                InvokePattern pattern = button.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
-
-                pattern.Invoke();
+                if (button.Current.IsEnabled)
+                {
+                    InvokePattern pattern = button.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
+                
+                    pattern.Invoke();
+                }
             }
             else
             {
@@ -64,9 +67,12 @@ namespace CultivationHouseTool
             AutomationElement button = getButton(window, title, index);
             if (button != null)
             {
-                InvokePattern pattern = button.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
-
-                pattern.Invoke();
+                if (button.Current.IsEnabled)
+                {
+                    InvokePattern pattern = button.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
+                
+                    pattern.Invoke();
+                }
             }
             else
             {

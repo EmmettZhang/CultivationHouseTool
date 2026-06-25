@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CultivationHouseTool", "Cul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CultivationHouseTools", "CultivationHouseTools\CultivationHouseTools.csproj", "{2D1DDE2E-1488-43F5-B96B-4D76B26DCF45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtils", "CommonUtils\CommonUtils.csproj", "{145CE45D-78E3-4D31-B306-EE8B0E552843}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{2D1DDE2E-1488-43F5-B96B-4D76B26DCF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D1DDE2E-1488-43F5-B96B-4D76B26DCF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D1DDE2E-1488-43F5-B96B-4D76B26DCF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145CE45D-78E3-4D31-B306-EE8B0E552843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145CE45D-78E3-4D31-B306-EE8B0E552843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145CE45D-78E3-4D31-B306-EE8B0E552843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145CE45D-78E3-4D31-B306-EE8B0E552843}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
