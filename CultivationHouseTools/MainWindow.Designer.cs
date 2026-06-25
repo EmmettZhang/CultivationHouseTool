@@ -23,8 +23,8 @@
         #region Windows 窗体设计器生成的代码
 
         /// <summary>
-        /// 设计器支持所需的方法 - 不要修改
-        /// 使用代码编辑器修改此方法的内容。
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -54,12 +54,12 @@
             this.dailyStatus = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flipMaxCount = new System.Windows.Forms.TextBox();
             this.stopLadder = new System.Windows.Forms.Button();
             this.ladder = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timeLabel = new System.Windows.Forms.Label();
-            this.flipMaxCount = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -290,7 +290,7 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(180, 176);
             this.textBox1.TabIndex = 25;
-            this.textBox1.Text = "自动日常说明\r\n每日八点自动签到、领取当前每日签到福利、葫芦签到、播撒灵露、门派演武、报名boss、购买金币精力和金币福袋、购买仙币幸运点和福袋、购买每日兑换、发红包和福包。\r\n每日八点十分、十三点十分收割并播种门派后山。\r\n每日十二点打真BOSS。每周一十二点收获葫芦。每周五十二点自动领取天梯奖励\r\n每日十六点获取boss结果，每周五十六点获取门派本周分成。";
+            this.textBox1.Text = "自动日常说明\r\n每日八点自动签到、领取当前每日签到福利、葫芦签到、播撒灵露、自动开始单双休、门派演武、报名boss、购买金币精力和金币福袋、购买仙币幸运点和福袋、" + "购买每日兑换、发红包和福包。\r\n每日八点十分、十三点十分收割并播种门派后山。\r\n每日十二点打真BOSS。每周一十二点收获葫芦。每周五十二点自动领取天梯奖励\r\n每" + "日十六点自动开始历练，获取boss结果，每周五十六点获取门派本周分成。\r\n";
             // 
             // panel1
             // 
@@ -318,6 +318,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(261, 209);
             this.panel1.TabIndex = 26;
+            // 
+            // flipMaxCount
+            // 
+            this.flipMaxCount.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.flipMaxCount.Location = new System.Drawing.Point(102, 91);
+            this.flipMaxCount.Name = "flipMaxCount";
+            this.flipMaxCount.Size = new System.Drawing.Size(53, 23);
+            this.flipMaxCount.TabIndex = 24;
+            this.flipMaxCount.Text = "21";
             // 
             // stopLadder
             // 
@@ -362,15 +371,6 @@
             this.timeLabel.TabIndex = 27;
             this.timeLabel.Text = "时间";
             // 
-            // flipMaxCount
-            // 
-            this.flipMaxCount.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.flipMaxCount.Location = new System.Drawing.Point(102, 91);
-            this.flipMaxCount.Name = "flipMaxCount";
-            this.flipMaxCount.Size = new System.Drawing.Size(53, 23);
-            this.flipMaxCount.TabIndex = 24;
-            this.flipMaxCount.Text = "21";
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -393,7 +393,6 @@
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
