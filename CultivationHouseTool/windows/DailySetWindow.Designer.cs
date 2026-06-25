@@ -44,6 +44,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.attackMethod = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.attribute = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +85,7 @@
             // 
             // setConfirm
             // 
-            this.setConfirm.Location = new System.Drawing.Point(182, 304);
+            this.setConfirm.Location = new System.Drawing.Point(182, 318);
             this.setConfirm.Name = "setConfirm";
             this.setConfirm.Size = new System.Drawing.Size(75, 23);
             this.setConfirm.TabIndex = 4;
@@ -144,14 +146,12 @@
             // luckyCount
             // 
             this.luckyCount.FormattingEnabled = true;
-            this.luckyCount.Items.AddRange(new object[] {
-            "是",
-            "否"});
+            this.luckyCount.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" });
             this.luckyCount.Location = new System.Drawing.Point(136, 194);
             this.luckyCount.Name = "luckyCount";
             this.luckyCount.Size = new System.Drawing.Size(121, 20);
             this.luckyCount.TabIndex = 11;
-            this.luckyCount.Text = "是";
+            this.luckyCount.Text = "5";
             // 
             // label3
             // 
@@ -167,21 +167,19 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(27, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 12);
+            this.label4.Size = new System.Drawing.Size(149, 12);
             this.label4.TabIndex = 12;
-            this.label4.Text = "是否自动兑换5次幸运点和10次仙币福袋";
+            this.label4.Text = "兑换仙币幸运点和福袋次数";
             // 
             // happyBag
             // 
             this.happyBag.FormattingEnabled = true;
-            this.happyBag.Items.AddRange(new object[] {
-            "是",
-            "否"});
+            this.happyBag.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
             this.happyBag.Location = new System.Drawing.Point(136, 225);
             this.happyBag.Name = "happyBag";
             this.happyBag.Size = new System.Drawing.Size(121, 20);
             this.happyBag.TabIndex = 14;
-            this.happyBag.Text = "否";
+            this.happyBag.Text = "0";
             // 
             // label5
             // 
@@ -213,11 +211,32 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "攻击方式";
             // 
+            // attribute
+            // 
+            this.attribute.FormattingEnabled = true;
+            this.attribute.Items.AddRange(new object[] { "金", "木", "水", "火", "土" });
+            this.attribute.Location = new System.Drawing.Point(136, 293);
+            this.attribute.Name = "attribute";
+            this.attribute.Size = new System.Drawing.Size(121, 20);
+            this.attribute.TabIndex = 18;
+            this.attribute.Text = "金";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(27, 296);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "历练属性";
+            // 
             // DailySetWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(290, 353);
+            this.Controls.Add(this.attribute);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.attackMethod);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.happyBag);
@@ -242,6 +261,9 @@
 
         }
 
+        private System.Windows.Forms.ComboBox attribute;
+        private System.Windows.Forms.Label label7;
+        
         #endregion
 
         private System.Windows.Forms.Label label1;

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Automation;
+using CultivationHouseTool.lib;
 
 namespace CultivationHouseTool.actions
 {
@@ -104,6 +105,30 @@ namespace CultivationHouseTool.actions
             {
                 Common.addMessage(_form.dailyMessage, "未找到修仙小屋窗口，请确保游戏正在运行并且窗口标题正确");
                 return;
+            }
+            
+            // 开始历练
+            Common.changeTab(mainWindow, "洞府", 0);
+            Common.clickButton(mainWindow, "停止", 0);
+            Common.clickButton(mainWindow, "停止", 1);
+            Common.changeTab(mainWindow, "历练", 0);
+            switch (DailySet.attribute)
+            {
+                case "金":
+                    Common.clickButton(mainWindow, "开始", 0);
+                    break;
+                case "木":
+                    Common.clickButton(mainWindow, "开始", 1);
+                    break;
+                case "水":
+                    Common.clickButton(mainWindow, "开始", 2);
+                    break;
+                case "火":
+                    Common.clickButton(mainWindow, "开始", 3);
+                    break;
+                case "土":
+                    Common.clickButton(mainWindow, "开始", 4);
+                    break;
             }
 
             // 自动获取boss结果

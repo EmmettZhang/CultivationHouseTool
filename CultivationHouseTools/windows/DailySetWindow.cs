@@ -28,11 +28,11 @@ namespace CultivationHouseTools
             wednesday.Checked = DailySet.wednesday;
             thursday.Checked = DailySet.thursday;
             friday.Checked = DailySet.friday;
+            attribute.Text = DailySet.attribute;
         }
 
         private void setConfirm_Click(object sender, EventArgs e)
         {
-            
             DailySet.monday = monday.Checked;
             DailySet.tuesday = tuesday.Checked;
             DailySet.wednesday = wednesday.Checked;
@@ -42,6 +42,7 @@ namespace CultivationHouseTools
             DailySet.luckyCount = luckyCount.Text;
             DailySet.happyBag = happyBag.Text;
             DailySet.attackMethod = attackMethod.Text;
+            DailySet.attribute = attribute.Text;
             Common.addMessage(_form.dailyMessage, $"已设置{DailySet.print()}");
             this.Close();
         }

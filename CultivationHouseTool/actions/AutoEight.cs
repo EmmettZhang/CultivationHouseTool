@@ -117,6 +117,9 @@ namespace CultivationHouseTool.actions
 
             // 葫芦
             hulu(mainWindow);
+            
+            // 开始单双修
+            startSleep(mainWindow);
 
             // 门派演武
             sectArena(mainWindow);
@@ -166,6 +169,20 @@ namespace CultivationHouseTool.actions
                 Common.clickButtonById(signWindow, "Close");
                 Thread.Sleep(new Random().Next(500, 1000));
             }
+        }
+        
+        // 开始单双修
+        public void startSleep(AutomationElement mainWindow)
+        {
+            Common.changeTab(mainWindow, "历练", 0);
+            Common.clickButton(mainWindow, "停止", 0);
+            Common.clickButton(mainWindow, "停止", 1);
+            Common.clickButton(mainWindow, "停止", 2);
+            Common.clickButton(mainWindow, "停止", 3);
+            Common.clickButton(mainWindow, "停止", 4);
+            Common.changeTab(mainWindow, "洞府", 0);
+            Common.clickButton(mainWindow, "开始", 1);
+            Common.clickButton(mainWindow, "开始", 0);
         }
 
         // 葫芦
@@ -265,19 +282,22 @@ namespace CultivationHouseTool.actions
         // 购买仙币兑换
         public void buyXianBiExchange(AutomationElement mainWindow)
         {
-            if (DailySet.luckyCount == "是" || DailySet.happyBag == "是")
+            int.TryParse(DailySet.luckyCount, out int luckyCount);
+            int.TryParse(DailySet.happyBag, out int happyBag);
+                
+            if (luckyCount > 0 || happyBag > 0)
             {
                 Common.changeTab(mainWindow, "兑换", 0);
                 Common.changeTab(mainWindow, "仙币兑换", 1);
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < (luckyCount > happyBag ? luckyCount : happyBag); i++)
                 {
-                    if (i < 5 && DailySet.luckyCount == "是")
+                    if (i < luckyCount)
                     {
                         Common.clickButton(mainWindow, "兑换10幸运点（1600仙币）");
                         Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},兑换10幸运点");
                         Thread.Sleep(new Random().Next(500, 1000));
                     }
-                    if (DailySet.happyBag == "是")
+                    if (i < happyBag)
                     {
                         Common.clickButton(mainWindow, "点击兑换1福袋（400仙币）");
                         Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},兑换1仙币福袋");
