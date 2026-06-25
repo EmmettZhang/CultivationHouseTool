@@ -44,9 +44,10 @@ namespace CultivationHouseTool
             DailySet.friday = false;
 
             DailySet.boss = "饕餮";
-            DailySet.luckyCount = "是";
-            DailySet.happyBag = "否";
+            DailySet.luckyCount = "5";
+            DailySet.happyBag = "0";
             DailySet.attackMethod = "物攻";
+            DailySet.attribute = "金";
             Common.addMessage(dailyMessage, DailySet.print());
 
             _autoSignIn = new AutoEight(this);
