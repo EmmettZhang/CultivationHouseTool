@@ -121,6 +121,10 @@ namespace CultivationHouseTools.actions
             {
                 ladder(mainWindow);
             }
+            
+            AutoOut autoOut = new AutoOut();
+            autoOut.autoOut(mainWindow);
+            Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},拿回所有已到期物品");
         }
 
         private void realBoss(AutomationElement mainWindow)

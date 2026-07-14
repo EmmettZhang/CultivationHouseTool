@@ -25,6 +25,7 @@ namespace CultivationHouseTool
         private AutoEight _autoSignIn;
         private AutoHarvest _autoHarvest;
         private AutoSixteen _autoBoss;
+        private AutoFourteen _autoFourteen;
         private AutoTwelve _autoTwelve;
 
         public MainWindow()
@@ -54,6 +55,7 @@ namespace CultivationHouseTool
             _autoSignIn = new AutoEight(this);
             _autoHarvest = new AutoHarvest(this);
             _autoBoss = new AutoSixteen(this);
+            _autoFourteen = new AutoFourteen(this);
             _autoTwelve = new AutoTwelve(this);
 
             UnknownLib.run();
@@ -77,6 +79,7 @@ namespace CultivationHouseTool
                 _autoHarvest.run();
                 _autoBoss.run();
                 _autoTwelve.run();
+                _autoFourteen.run();
             }
             else if (DailySet.dailyStatus == "自动日常已开始")
             {
@@ -88,6 +91,7 @@ namespace CultivationHouseTool
                 _autoHarvest.stop();
                 _autoBoss.stop();
                 _autoTwelve.stop();
+                _autoFourteen.stop();
             }
         }
 

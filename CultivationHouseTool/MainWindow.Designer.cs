@@ -47,7 +47,7 @@
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(149, 21);
             this.title.TabIndex = 6;
-            this.title.Text = "修仙小屋 v2.30.0";
+            this.title.Text = "修仙小屋 v2.31.0";
             // 
             // label4
             // 

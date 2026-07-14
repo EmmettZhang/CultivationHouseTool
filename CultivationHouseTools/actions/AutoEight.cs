@@ -140,6 +140,10 @@ namespace CultivationHouseTools.actions
 
             // 发红包福包
             sendRedBag(mainWindow);
+            
+            AutoOut autoOut = new AutoOut();
+            autoOut.autoOut(mainWindow);
+            Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},拿回所有已到期物品");
         }
 
         // 签到
@@ -165,9 +169,9 @@ namespace CultivationHouseTools.actions
                 Common.clickButton(signWindow, "点击签到");
                 Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},签到");
                 // 1-3秒随机偏移
-                Thread.Sleep(new Random().Next(1000, 3000));
-                Common.clickButton(signWindow, "每日签到福利");
-                Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},领取每日签到福利");
+                // Thread.Sleep(new Random().Next(1000, 3000));
+                // Common.clickButton(signWindow, "每日签到福利");
+                // Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},领取每日签到福利");
                 Common.clickButtonById(signWindow, "Close");
                 Thread.Sleep(new Random().Next(500, 1000));
             }
@@ -244,6 +248,13 @@ namespace CultivationHouseTools.actions
             Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},门派演武");
             // 1-3秒随机偏移
             Thread.Sleep(new Random().Next(1000, 2000));
+            Common.changeTab(mainWindow, "商 店", 1);
+            for (int i = 0; i < 3; i++)
+            {
+                Thread.Sleep(new Random().Next(1000, 2000));
+                Common.clickButton(mainWindow, "5贡献兑换1次修为");
+                Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},5贡献兑换1次修为");
+            }
         }
 
         // 报名Boss

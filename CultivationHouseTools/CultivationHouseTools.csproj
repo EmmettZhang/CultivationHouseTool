@@ -51,8 +51,10 @@
     <ItemGroup>
         <Compile Include="actions\AutoEight.cs" />
         <Compile Include="actions\AutoFlip.cs" />
+        <Compile Include="actions\AutoFourteen.cs" />
         <Compile Include="actions\AutoHarvest.cs" />
         <Compile Include="actions\AutoLadder.cs" />
+        <Compile Include="actions\AutoOut.cs" />
         <Compile Include="actions\AutoRefreshShop.cs" />
         <Compile Include="actions\AutoSixteen.cs" />
         <Compile Include="actions\AutoTwelve.cs" />

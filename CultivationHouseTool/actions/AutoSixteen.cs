@@ -107,30 +107,6 @@ namespace CultivationHouseTool.actions
                 Common.addMessage(_form.dailyMessage, "未找到修仙小屋窗口，请确保游戏正在运行并且窗口标题正确");
                 return;
             }
-            
-            // 开始历练
-            Common.changeTab(mainWindow, "洞府", 0);
-            Common.clickButton(mainWindow, "停止", 0);
-            Common.clickButton(mainWindow, "停止", 1);
-            Common.changeTab(mainWindow, "历练", 0);
-            switch (DailySet.attribute)
-            {
-                case "金":
-                    Common.clickButton(mainWindow, "开始", 0);
-                    break;
-                case "木":
-                    Common.clickButton(mainWindow, "开始", 1);
-                    break;
-                case "水":
-                    Common.clickButton(mainWindow, "开始", 2);
-                    break;
-                case "火":
-                    Common.clickButton(mainWindow, "开始", 3);
-                    break;
-                case "土":
-                    Common.clickButton(mainWindow, "开始", 4);
-                    break;
-            }
 
             // 自动获取boss结果
             Common.changeTab(mainWindow, "BOSS", 0);
@@ -150,7 +126,10 @@ namespace CultivationHouseTool.actions
                 Common.clickButton(mainWindow, "领取我的本周分成");
                 Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},获取门派每周分成");
             }
-
+            
+            AutoOut autoOut = new AutoOut();
+            autoOut.autoOut(mainWindow);
+            Common.addMessage(_form.dailyMessage, $"{DateTime.Now.ToString()},拿回所有已到期物品");
         }
 
         public void stop()
